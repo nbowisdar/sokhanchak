@@ -11,13 +11,13 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as IndexImport } from './routes/index'
+import { Route as SokhanchakImport } from './routes/sokhanchak'
 
 // Create/Update Routes
 
-const IndexRoute = IndexImport.update({
-  id: '/',
-  path: '/',
+const SokhanchakRoute = SokhanchakImport.update({
+  id: '/sokhanchak',
+  path: '/sokhanchak',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -25,11 +25,11 @@ const IndexRoute = IndexImport.update({
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexImport
+    '/sokhanchak': {
+      id: '/sokhanchak'
+      path: '/sokhanchak'
+      fullPath: '/sokhanchak'
+      preLoaderRoute: typeof SokhanchakImport
       parentRoute: typeof rootRoute
     }
   }
@@ -38,33 +38,33 @@ declare module '@tanstack/react-router' {
 // Create and export the route tree
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
+  '/sokhanchak': typeof SokhanchakRoute
 }
 
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
+  '/sokhanchak': typeof SokhanchakRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
-  '/': typeof IndexRoute
+  '/sokhanchak': typeof SokhanchakRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/sokhanchak'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/sokhanchak'
+  id: '__root__' | '/sokhanchak'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
+  SokhanchakRoute: typeof SokhanchakRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
+  SokhanchakRoute: SokhanchakRoute,
 }
 
 export const routeTree = rootRoute
@@ -77,11 +77,11 @@ export const routeTree = rootRoute
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
-        "/"
+        "/sokhanchak"
       ]
     },
-    "/": {
-      "filePath": "index.tsx"
+    "/sokhanchak": {
+      "filePath": "sokhanchak.tsx"
     }
   }
 }

@@ -10,7 +10,7 @@ import Footer from "@/components/Footer"
 import Contact from "@/components/Contact"
 import Certificates from "@/components/Certificates";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/sokhanchak")({
 	component: App,
 });
 
