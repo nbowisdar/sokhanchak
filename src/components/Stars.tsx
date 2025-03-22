@@ -1,6 +1,5 @@
-"use client"
 import { Star } from "lucide-react"
-import React, { useState } from "react"
+import { useState } from "react"
 
 const Stars = () => {
 	const [rating, setRating] = useState(5)

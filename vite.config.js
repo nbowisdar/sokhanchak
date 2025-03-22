@@ -11,6 +11,7 @@ export default defineConfig({
     viteReact(),
     tailwindcss(),
   ],
+  base: "/Mariia_Sokhanchak",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"), // Maps @ to src directory
