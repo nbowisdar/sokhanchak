@@ -18,7 +18,7 @@ const Hero = () => {
 					</div>
 					<div className="mt-5 sm:mt-0 sm:ml-5">
 						<img
-							src="sokhanchak/mari.jpg"
+							src="https://github.com/nbowisdar/sokhanchak/blob/main/public/mari.jpg?raw=true"
 							alt="Maria Sohanchak"
 							width={300}
 							height={300}
